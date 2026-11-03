@@ -1,0 +1,59 @@
+/* ==========================================================================
+   Badge — pill-shaped label
+   ========================================================================== */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+  white-space: nowrap;
+  user-select: none;
+}
+
+/* ---- Sizes ---- */
+.sm {
+  font-size: var(--fs-xs);
+  padding: 2px 8px;
+  height: 20px;
+}
+
+.md {
+  font-size: var(--fs-sm);
+  padding: 4px 12px;
+  height: 26px;
+}
+
+/* ---- Color variants ---- */
+.default {
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+}
+
+.success {
+  background: var(--color-success-soft);
+  color: var(--color-success);
+}
+
+.warning {
+  background: var(--color-warning-soft);
+  color: var(--color-warning);
+}
+
+.danger {
+  background: var(--color-error-soft);
+  color: var(--color-error);
+}
+
+.info {
+  background: hsla(199, 89%, 48%, 0.15);
+  color: hsl(199, 89%, 48%);
+}
+
+.neutral {
+  background: var(--color-surface-muted);
+  color: var(--color-text-secondary);
+}

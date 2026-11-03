@@ -1,0 +1,109 @@
+/* ==========================================================================
+   Input — text field with label, icon, error
+   ========================================================================== */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.label {
+  font-size: var(--fs-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+}
+
+.inputWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  position: absolute;
+  left: var(--space-3);
+  color: var(--color-text-tertiary);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-primary);
+  font-family: var(--font-family);
+  font-size: var(--fs-sm);
+  padding: var(--space-2) var(--space-3);
+  transition: border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.input {
+  height: 40px;
+}
+
+.textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.hasIcon {
+  padding-left: calc(var(--space-3) + 20px + var(--space-2));
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--color-text-tertiary);
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-accent-soft);
+}
+
+/* ---- Error state ---- */
+.error .input,
+.error .textarea {
+  border-color: var(--color-error);
+}
+
+.error .input:focus,
+.error .textarea:focus {
+  box-shadow: 0 0 0 3px var(--color-error-soft);
+}
+
+.errorMsg {
+  font-size: var(--fs-xs);
+  color: var(--color-error);
+  margin-top: var(--space-1);
+}
+
+/* ---- Password toggle ---- */
+.toggle {
+  position: absolute;
+  right: var(--space-2);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-tertiary);
+  padding: var(--space-1);
+  display: flex;
+  align-items: center;
+  border-radius: var(--radius-xs);
+}
+
+.toggle:hover {
+  color: var(--color-text-secondary);
+}
+
+.toggle:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-focus-ring);
+}
